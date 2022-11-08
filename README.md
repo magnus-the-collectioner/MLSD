@@ -1,45 +1,44 @@
 # MLSD
 
-[Introduce yourself]:
+**Introduce yourself**:
 "From the engineering standpoint I have been working mostly with machine learning, doing stuff with GANs and RL, some amount of NLP. From the product standpoint, I have a lot of exposure to biotechnology and quantum computing, primarily in Drug Discovery. Right at the moment I am a Principal Machine Learning Architect in a company of around a thousand employees working with various pharma companies."
 
-[Ask clarifying questions on the problem and rephrase the problem] (On top of the board - key concepts):
+**Ask clarifying questions on the problem and rephrase the problem** (On top of the board - key concepts):
 Try to make assumptions instead of direct questions, ask if the assumptions are off.
 The purpose of our business is to maximize profits - how do we achieve that? 
 
-[Formulate a plan for the presentation] (5 equal vertical segments on the board):
-+Business goals and metrics
-+Data collection and labelling
-+Feature selection and engineering
-+Modelling baseline and solution
-+Deployment and monitoring
+**Formulate a plan for the presentation** (5 equal vertical segments on the board):
++ Business goals and metrics
++ Data collection and labelling
++ Feature selection and engineering
++ Modelling baseline and solution
++ Deployment and monitoring
 
-1) Business
+## 1) Business
 
-If there are several types of users, separate their requirements. (e.g., driver and passenger)
+**If there are several types of users, separate their requirements.** (e.g., driver and passenger)
 
-Functional requirements (whole service):
+**Functional requirements (whole service)**:
 Possible actions in the system.
 
-Non-functional requirements (whole service):
+**Non-functional requirements (whole service)**:
 What does the user care about?
 
-Decouple goals of the ML part:
-E.g. for NewsFeed:
-• Filter out spam
-• Filter out NSFW content
-• Filter out misinformation
-• Rank posts by quality
-• Rank posts by engagement
+**Decouple goals of the ML part** (e.g. for NewsFeed):
+> • Filter out spam
+> • Filter out NSFW content
+> • Filter out misinformation
+> • Rank posts by quality
+> • Rank posts by engagement
 
-Business metrics we want to maximize for these goals:
+**Business metrics we want to maximize for these goals**:
 Take-Rate(netflix), Clicks, Conversion, Delay, Coverage, MAU (WAU, DAU). How are we constrained on some of this? These metrics might be used for validation and updating the model.
 
 Business metrics to ML metrics for these goals:
 What is X and Y? RMSE/MAPE/MSE/MAE, AUC, DCG, etc. Prioritize type-1 and type-2 errors. Think about metric to loss function. Think about model calibration.
 It's possible to adapt loss function to a problem (somehow change the shape) - if there is time for it.
 
-2) Data
+## 2) Data
 
 Methods of collecting\labelling data, risks and constraints. Impact on the end user is crucial.
 
@@ -85,7 +84,7 @@ Prevent data leakage by splitting by time (if non-stationary process) and (or) b
 Don't perform preprocessing before splitting - might induce biases with imputing or scaling.
 Think about duplicates or close-related data points not to be split between train/test.
 
-3) Features
+## 3) Features
 
 Very well rounded ML features. Pros and cons of encoding choices. Implications for the final solution.
 
@@ -111,7 +110,7 @@ Important features?
 Make some hypotheses on the product level. Refer to validation metrics that might be used to evaluate if features are improving the score.
 Sometimes feature importance scores, most likely attention maps or gradient flow. Think about SHAP or LIME for interpretability.
 
-4) Models
+## 4) Models
 
 Modelling - choice of 2-3 models and figure out trade-offs between them. What are the risks, how to mitigate - pros and cons. Make a clear decision on a trade off. Limitations, bottlenecks of the final model. 
 
@@ -130,7 +129,7 @@ Assumptions made?
 E.g. IID, Smooth (close points = close results), normal distribution?
 
 
-5) Deployment
+## 5) Deployment
 
 Model debugging - A/B testing!, online and offline evaluation. Pro-actively consider solutions! Justify metric choices and how to compute them.
 Tests are used not only for data drift, but also for changing business priorities or hypotheses. 
@@ -191,4 +190,4 @@ Monitoring.
 What to do if we can't run tests all the time?
 We can try to parametrize some prior around an approximate optimal point and run tests around it.
 
-0) Start iterating on details if there is time. Ask the interviewer if he wants to focus on something in particular or should you proceed on your notes.
+## 0) Start iterating on details if there is time. Ask the interviewer if he wants to focus on something in particular or should you proceed on your notes.
