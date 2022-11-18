@@ -5,7 +5,7 @@ From the engineering standpoint I have been working mostly with machine learning
 
 **Ask clarifying questions on the problem and rephrase the problem** (On top of the board - key concepts):
 Try to make assumptions instead of direct questions, ask if the assumptions are off.\
-The purpose of our business is to maximize profits - how do we achieve that?\ 
+The purpose of our business is to maximize profits - how do we achieve that?
 
 Formulate a plan for the presentation (5 equal vertical segments on the board):
 Business goals and metrics, data collection and labelling, feature selection and engineering, modelling and deployment, monitoring and validation
@@ -55,7 +55,7 @@ Natural - best scenario if available right away, feedback loop might be too long
 User - should be simplified, requires double-check, but no privacy concerns.\
 Team - imposes a risk of privacy leak, expensive and long, but the most controllable.\
 Algo - not precise, but cheap and fast, could be good for a cold-start.\
-If algo: Weak-supervision, semi-supervised (close distance), transfer and active learning\
+If algo: Weak-supervision, semi-supervised (close distance), transfer and active learning
 
 What about quality-control of labelling?\
 Consistency - changing source might cause incompatible distributions.\
@@ -119,7 +119,7 @@ Is it possible to improve on top of the baseline? Should we switch the model or 
 
 Ensembling such as boosting, stacking or bagging? Decomposing the problem into subproblems?\
 Ensembles are harder to deploy and mantain, but worth it in money-flowing services such as click-through rate.\
-Bagging - improves on data imbalance. Boosting - natural focus on errors. Stacking - system decomposition.\
+Bagging - improves on data imbalance. Boosting - natural focus on errors. Stacking - system decomposition.
 
 Assumptions made?
 E.g. IID, Smooth (close points = close results), normal distribution?
@@ -219,7 +219,7 @@ Online Evaluation?\
 Test split on benchmark-dataset, backtest on frequently updated data points. Three types of production tests: \
 A\B Testing (stateless) - route (randomly!) traffic between models, in some cases - alternate from day to day (e.g., pricing). Statistical significance with two-sample tests.\
 Interleaving Experiments - divide not users, but the predictions for the same user. Shows only preferences and is not directly connected to business metrics.\
-Bandits (stateful) - exploration\exploitation tradeoff while routing between models, i.e. finding best models while maximizing the accuracy. Outperforms A/B when feedback is fast.\
+Bandits (stateful) - exploration\exploitation tradeoff while routing between models, i.e. finding best models while maximizing the accuracy. Outperforms A/B when feedback is fast.
 
 
 ## 0) Start iterating on details if there is time. Ask the interviewer if he wants to focus on something in particular or should you proceed on your notes.
